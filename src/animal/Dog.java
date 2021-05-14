@@ -1,9 +1,25 @@
-public class Dog implements Animal {
+package animal;
+
+public class Dog extends AbstractAnimal {
 
     private int jumpHeight;
     private int runSpeed;
 
-    @Override
+    public Dog(String voice, String name, double age, int jumpHeight, int runSpeed) {
+        super(voice, name, age);
+        this.jumpHeight = jumpHeight;
+        this.runSpeed = runSpeed;
+    }
+
+    public void doSomething() {
+        System.out.println(String.format("Rzucam frisbee. Frania biegnie z prędkością %s i skacze " +
+                "na wysokość %d łapiąc frisbee.", runSpeed, jumpHeight));
+    }
+}
+
+
+
+    /*@Override
     public String getVoice() {
         return "Bark";
     }
@@ -28,5 +44,5 @@ public class Dog implements Animal {
         System.out.println(String.format("Rzucam frisbee. Frania biegnie z prędkością %s i skacze " +
                 "na wysokość %d łapiąc frisbee.", runSpeed, jumpHeight));
 
-    }
-}
+    }*/
+

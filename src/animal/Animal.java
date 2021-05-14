@@ -1,3 +1,5 @@
+package animal;
+
 public interface Animal {
     String getVoice();
     String getName();

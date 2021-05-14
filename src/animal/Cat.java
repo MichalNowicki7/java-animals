@@ -1,6 +1,15 @@
-public class Cat implements Animal {
+package animal;
 
-    @Override
+public class Cat extends AbstractAnimal {
+    public Cat(String voice, String name, double age) {
+        super(voice, name, age);
+    }
+
+    public void doSomething() {
+
+    }
+}
+    /*@Override
     public String getVoice() {
         return "Meow";
     }
@@ -17,5 +26,5 @@ public class Cat implements Animal {
     @Override
     public void doSomething() {
 
-    }
-}
+    }*/
+
